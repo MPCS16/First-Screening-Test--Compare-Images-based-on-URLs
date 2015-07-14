@@ -100,14 +100,14 @@ class compareImages
 		$bits1 = $this->bits($colorMean1);
 		$bits2 = $this->bits($colorMean2);
 		
-		$hammeringDistance = 0;
+		$hammeringDistance = 100;
 		
 		for($a = 0;$a<64;$a++)
 		{
 		
 			if($bits1[$a] != $bits2[$a])
 			{
-				$hammeringDistance++;
+				$hammeringDistance--;
 			}
 			
 		}
