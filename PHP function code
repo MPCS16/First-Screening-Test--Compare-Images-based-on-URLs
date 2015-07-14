@@ -35,7 +35,7 @@
     <div id="content">
      
         <h2>Try it!</h2> 
-        <div id="testC"><div id="test"><img src="http://cdn.playbuzz.com/cdn/dfbf574f-e2e4-4a07-8cc4-470ca161d6f2/adac5da9-6485-4d6d-b0fd-ebf26e38e285.jpg"><img src="http://www.explosion.com/wp-content/uploads/2014/12/813.jpg"><hr>The two image gave us this number: 0 | This means they are similar.</div></div>        <form method="post" action="">
+        <div id="testC"><div id="test"><img src="http://cdn.playbuzz.com/cdn/dfbf574f-e2e4-4a07-8cc4-470ca161d6f2/adac5da9-6485-4d6d-b0fd-ebf26e38e285.jpg"><img src="http://www.explosion.com/wp-content/uploads/2014/12/813.jpg"><hr>The two image gave us this number: 0 | This means they are not similar.</div></div>        <form method="post" action="">
           <input type="text" placeholder="Image 1" name="i1" id="i1" /><input type="text" placeholder="Image 2" name="i2" id="i2" /> <input type="submit" name="submit" value="Test it" />
         </form>
        //PHP CODE FOR IMAGE COMPARISON
