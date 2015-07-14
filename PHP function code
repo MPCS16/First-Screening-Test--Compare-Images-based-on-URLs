@@ -1,4 +1,48 @@
-<?php
+//HTML body code
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Compare Images PHP Class</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/master.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script>
+    $(document).ready(function(){
+      var firstClick = true;
+      $('#testC,#test').click(function(){
+        $('#testC,#test').fadeOut(500);
+      })
+      
+        var siteURL = 'http://compareimages.nikhazy-dizajn.hu/';
+        $("#examples img").click(function(){
+          if(firstClick){
+            firstClick = false;
+            $("#i1").val(siteURL + $(this).attr('src'));
+           
+          }else{
+            firstClick = true;
+             $("#i2").val(siteURL + $(this).attr('src'));
+          }
+          
+          
+        });
+    })
+    </script>
+</head>
+<body>
+
+  <div id="container">
+    <div id="content">
+     
+        <h2>Try it!</h2> (copy image URLs here or click on the images above to put their URL in the fields below. The clicks alternately change the value of the fields.)
+        <div id="testC"><div id="test"><img src="http://compareimages.nikhazy-dizajn.hu/images/2a.png"><img src="http://compareimages.nikhazy-dizajn.hu/images/2a.png"><hr>The two image gave us this number: 0 | This means they are similar.</div></div>        <form method="post" action="">
+          <input type="text" placeholder="Image 1" name="i1" id="i1" /><input type="text" placeholder="Image 2" name="i2" id="i2" /> <input type="submit" name="submit" value="Test it" />
+        </form>
+       //PHP CODE FOR IMAGE COMPARISON
+      <?php
 class compareImages
 {
 	private function mimeType($i)
@@ -116,5 +160,5 @@ class compareImages
 	}
 }
 ?>
-
-
+</body>
+</html>
